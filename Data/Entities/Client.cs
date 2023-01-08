@@ -3,11 +3,11 @@
     public class Client
     {
 
-        public int Id { get; set; }
-        public string NameClient { get; set; }
-        public string City { get; set; }
-        public string Adress { get; set; }
-        public string Country { get; set; }
+        public int id { get; set; }
+        public string nameClient { get; set; }
+        public string city { get; set; }
+        public string adress { get; set; }
+        public string country { get; set; }
 
         /*
         [Id]

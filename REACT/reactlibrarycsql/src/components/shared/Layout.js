@@ -6,7 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Layout(props){
 return(
-
         <>
             <Navbar bg="primary" variant="dark" expand="lg">
             <Container>
