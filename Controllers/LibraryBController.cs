@@ -22,10 +22,14 @@ namespace LibraryReactSqlC.Controllers
         public async Task<IActionResult> Get()
         {
             var lib = await _reactContext.LibraryB.FromSqlRaw("SELECT * FROM LibrayB").ToListAsync();
-        
             return Ok(lib);
-
-
+        }
+        [HttpPost]
+        public async Task<IActionResult> Post(LibraryB newLibrary)
+        {
+            _reactContext.LibraryB.Add(newLibrary);
+            await _reactContext.SaveChangesAsync();
+            return Ok(newLibrary);
         }
 
     }

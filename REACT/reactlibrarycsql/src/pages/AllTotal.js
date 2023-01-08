@@ -4,10 +4,14 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { Navigate, useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 function AllTotal(){
-    //biblioteca AXIOS
+
+    //biblioteca AXIOS para back-end
     const [libraryB, setLibraryB] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         axios.get("https://localhost:7103/api/LibraryB")
@@ -18,7 +22,19 @@ function AllTotal(){
     });
     
     },[])
-    return (             
+    return (
+        <>
+            <Row className="mt-2">
+                <Col md={{span: 4, offset:4}}>
+                    <Button variant="primary" type="submit" 
+                        onClick={()=> 
+                        {navigate("/add-library");
+                        }}
+                        >
+                        Add Library
+                    </Button>
+                </Col>
+            </Row>             
             <Row xs={1} md={3} className="g-4 mt-1">
             {
             libraryB.map((lb) => (
@@ -38,6 +54,7 @@ function AllTotal(){
             </Col>
             ))}
         </Row>
+        </>
     );
 
 }
