@@ -26,7 +26,7 @@ function AllTotal(){
         <>
             <Row className="mt-2">
                 <Col md={{span: 4, offset:4}}>
-                    <Button variant="primary" type="submit" 
+                    <Button variant="primary" type="button" 
                         onClick={()=> 
                         {navigate("/add-library");
                         }}

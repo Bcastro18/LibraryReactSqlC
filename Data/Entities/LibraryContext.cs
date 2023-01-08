@@ -6,7 +6,7 @@ namespace LibraryReactSqlC.Data.Entities
     {
         public LibraryContext(DbContextOptions<LibraryContext> options) : base(options){   }
 
-        public DbSet<LibraryB> LibraryB { get; set; }
+        public DbSet<LibrayB> LibrayB { get; set; }
 
 
     }

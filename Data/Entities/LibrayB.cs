@@ -1,6 +1,6 @@
 ﻿namespace LibraryReactSqlC.Data.Entities
 {
-    public class LibraryB
+    public class LibrayB
     {
         public int id { get; set; }
         public string nameLib { get; set; }
